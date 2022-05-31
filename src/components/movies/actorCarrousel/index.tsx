@@ -11,10 +11,10 @@ export const ActingCarrousel = ({ credits, url }: credits) => {
     <S.Container>
       {credits &&
         credits.length > 1 &&
-        credits.map((item) => (
-          <>
+        credits.map((item, index) => (
+          <div key={index}>
             {item.profile_path !== null && (
-              <S.Item key={item.order}>
+              <S.Item>
                 <img src={`${url}${item.profile_path}`} alt="foto" />
                 <span>
                   {item.name} <br />
@@ -22,7 +22,7 @@ export const ActingCarrousel = ({ credits, url }: credits) => {
                 </span>
               </S.Item>
             )}
-          </>
+          </div>
         ))}
     </S.Container>
   );

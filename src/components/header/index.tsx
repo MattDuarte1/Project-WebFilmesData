@@ -19,7 +19,12 @@ export const Header = ({ funcTheme, stateTheme }: ITheme) => {
   );
 
   const handleSearchMovie = () => {
-    navigate(`/movie/${inputRef.current?.value}`);
+    if (inputRef.current?.value) {
+      navigate(`/movie/search=${inputRef.current?.value}`);
+      inputRef.current.value = "";
+    } else {
+      alert("Digite um nome");
+    }
   };
 
   const handleActiveMenuDrawer = () =>
