@@ -18,4 +18,4 @@ Projeto feito para testar conhecimentos, consome a API do TMDB filmes e lista fi
 
 ` npm run start`
 
-### Input search filmes está desativado no momento.
+### Página de search filme pelo nome está incompleta, falta adicionar algumas funcionalidades e colocar o padrão de cores de cada thema.
