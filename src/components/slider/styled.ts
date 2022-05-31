@@ -57,6 +57,7 @@ export const Slide = styled.div<Islider>`
   display: flex;
   flex-direction: row;
   align-items: center;
+  cursor: pointer;
   transform: translateY(-${(props) => props.translaterY}%);
 
   img {

@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import * as S from "./styled";
 import { Islider } from "./type";
+import { useNavigate } from "react-router-dom";
 
 export const Slider = ({ data }: Islider) => {
+  const navigate = useNavigate();
   const [checkBoxSelected, setCheckBoxSelected] = useState<number>(0);
   const [translaterY, setTranslaterY] = useState<number>(0);
   const [autoSliderActived, setAutoSliderActived] = useState<Boolean>(true);
@@ -44,7 +46,11 @@ export const Slider = ({ data }: Islider) => {
       <S.Content>
         {data &&
           data.map((item, index) => (
-            <S.Slide key={index} translaterY={translaterY}>
+            <S.Slide
+              onClick={() => navigate(`/movie/${item.id}`)}
+              key={index}
+              translaterY={translaterY}
+            >
               <img
                 src={`https://image.tmdb.org/t/p/w500/${item.poster_path}`}
                 alt="Batman"
