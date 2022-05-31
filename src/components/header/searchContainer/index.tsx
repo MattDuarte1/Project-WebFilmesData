@@ -1,17 +1,22 @@
 import * as S from "./styled";
 import { BsSearch } from "react-icons/bs";
 
-export const SearchContainerInput = () => {
+type Iprops = {
+  isRef: React.RefObject<HTMLInputElement>;
+  func: () => void;
+};
+
+export const SearchContainerInput = ({ isRef, func }: Iprops) => {
   return (
     <S.SearchContainer>
       <S.InputContainer>
-        <input type="text" placeholder="Procure por filmes" />
+        <input ref={isRef} type="text" placeholder="Procure por filmes" />
         <span>
           <BsSearch />
         </span>
       </S.InputContainer>
 
-      <button>Pesquisar</button>
+      <button onClick={func}>Pesquisar</button>
     </S.SearchContainer>
   );
 };
