@@ -25,7 +25,9 @@ export const NavBar = ({ funcDrawer, funcTheme, stateTheme }: IfuncDrawer) => {
           <a href="#categorias">Categorias</a>
         </li>
         <li>
-          <a href="http://www.google.com"> GITHUB</a>
+          <a href="https://github.com/MattDuarte1/Project-WebFilmesData">
+            GITHUB
+          </a>
         </li>
       </S.NavLinks>
       <S.IconThema>

@@ -21,7 +21,9 @@ export const Drawer = ({ status = false, onClick }: Idata) => {
           <li>
             <AiFillHome />
             <span>
-              <Link to="/">Home</Link>
+              <Link onClick={onClick} to="/">
+                Home
+              </Link>
             </span>
           </li>
           <li>
@@ -43,7 +45,11 @@ export const Drawer = ({ status = false, onClick }: Idata) => {
           </li>
           <li>
             <BsGithub />
-            <span>Github</span>
+            <span>
+              <a href="https://github.com/MattDuarte1/Project-WebFilmesData">
+                Github
+              </a>
+            </span>
           </li>
         </ul>
       </S.Drawer>
